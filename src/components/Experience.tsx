@@ -7,47 +7,47 @@ import { CheckCircle, Calendar } from 'lucide-react';
 export const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-24 relative">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="Career & Achievements"
-          title="Experience & Milestones"
+          eyebrow="Mission Milestones"
+          title="Career & Architecture Log"
           subtitle="A track record of engineering cross-platform client applications, developer utilities, and modern software architectures."
         />
 
-        <div className="relative border-l border-slate-800 ml-4 sm:ml-6 space-y-12">
+        <div className="relative border-l border-cyan-500/30 ml-4 sm:ml-6 space-y-12">
           {profileData.experience.map((item, index) => (
             <div key={index} className="relative pl-6 sm:pl-8 group">
               {/* Timeline marker */}
-              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-cyan-500 group-hover:bg-cyan-500 transition-colors shadow-sm shadow-cyan-500/50"></div>
+              <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-cyan-400 group-hover:bg-cyan-400 transition-all shadow-[0_0_12px_rgba(6,182,212,0.6)]"></div>
 
-              <div className="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 border-slate-800/80">
+              <div className="glass-card glass-card-hover rounded-2xl p-6 sm:p-7 border-slate-800/90 shadow-[0_0_20px_rgba(6,182,212,0.04)]">
                 {/* Header */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                   <div>
-                    <h3 className="text-lg font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors">
+                    <h3 className="text-lg font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors font-mono">
                       {item.role}
                     </h3>
                     {item.company && (
                       <p className="text-xs sm:text-sm font-medium text-cyan-400 font-mono">
-                        {item.company}
+                        // {item.company}
                       </p>
                     )}
                   </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-mono text-slate-400 self-start sm:self-auto">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950 border border-slate-800 text-xs font-mono text-slate-400 self-start sm:self-auto shadow-inner">
                     <Calendar className="w-3.5 h-3.5 text-cyan-400" />
                     <span>{item.period}</span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-xs sm:text-sm text-slate-300 mb-4 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 mb-4 leading-relaxed font-light">
                   {item.description}
                 </p>
 
                 {/* Highlights */}
                 <div className="space-y-2 mb-5">
                   {item.highlights.map((highlight, hIdx) => (
-                    <div key={hIdx} className="flex items-start gap-2 text-xs text-slate-400 leading-normal">
+                    <div key={hIdx} className="flex items-start gap-2 text-xs text-slate-400 leading-normal font-light">
                       <CheckCircle className="w-3.5 h-3.5 text-cyan-400 flex-shrink-0 mt-0.5" />
                       <span>{highlight}</span>
                     </div>

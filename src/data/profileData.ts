@@ -123,30 +123,30 @@ export const profileData: ProfileData = {
       metrics: 'Scaffolding & Monorepo Tool'
     },
     {
-      id: 'agent_skills',
-      title: 'agent_skills',
-      description: 'A curated collection of intelligent agent skills and automation hooks designed to supercharge autonomous engineering workflows.',
+      id: 'agent-team',
+      title: 'agent-team',
+      description: 'A curated collection of intelligent agent team skills and protocols designed to orchestrate autonomous multi-agent engineering workflows.',
       longDescription: 'Specialized agent instructions and workflows covering Dart, Flutter QA testing, DevOps pipelines, and Spec-Driven Development.',
-      tags: ['AI Agents', 'Automation', 'DevOps', 'Workflows', 'Tooling'],
+      tags: ['AI Agents', 'Multi-Agent', 'Orchestration', 'Flutter', 'DevOps'],
       stars: 2,
       language: 'Markdown & Shell',
       languageColor: '#8b5cf6',
-      repoUrl: 'https://github.com/ThiagoEvoa/agent_skills',
+      repoUrl: 'https://github.com/ThiagoEvoa/agent-team',
       featured: true,
-      metrics: 'Agentic Workflows'
+      metrics: 'Multi-Agent Team'
     },
     {
       id: 'dynamic_api_dart',
       title: 'dynamic_api_dart',
-      description: 'A fast, flexible mock backend built in Dart to simulate HTTP responses and test client communication during rapid prototyping.',
-      longDescription: 'Enables mobile and web developers to decouple frontend client development from backend readiness with dynamic endpoint mocking and rapid responses.',
-      tags: ['Dart', 'HTTP Mocking', 'Backend', 'API Testing'],
+      description: 'A dynamic REST mock API service built with Dart Frog to simulate HTTP endpoints and in-memory JSON state during client development.',
+      longDescription: 'Leverages Dart Frog routing with in-memory JSON payload holding and Docker containerization to decouple frontend and mobile client testing.',
+      tags: ['Dart Frog', 'Dart', 'REST API', 'Backend', 'Docker'],
       stars: 1,
       language: 'Dart',
       languageColor: '#00B4AB',
       repoUrl: 'https://github.com/ThiagoEvoa/dynamic_api_dart',
       featured: true,
-      metrics: 'Mock API Server'
+      metrics: 'Dart Frog Backend'
     }
   ],
   articles: [

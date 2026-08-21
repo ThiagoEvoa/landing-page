@@ -9,7 +9,7 @@ import {
   Layers, 
   CheckCircle2, 
   Sparkles,
-  Cpu
+  Orbit
 } from 'lucide-react';
 
 export const Skills: React.FC = () => {
@@ -30,11 +30,11 @@ export const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-24 relative bg-slate-950/40 border-y border-slate-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 relative bg-slate-950/60 border-y border-cyan-500/10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="Technical Stack & Expertise"
-          title="Skills & Technologies"
+          eyebrow="Core Engine & Capabilities"
+          title="Gravitational Tech Stack"
           subtitle="Specialized in building end-to-end multi-platform applications, reactive backend services, and autonomous developer tooling."
         />
 
@@ -49,19 +49,19 @@ export const Skills: React.FC = () => {
                 onMouseEnter={() => setActiveCategory(index)}
                 onMouseLeave={() => setActiveCategory(null)}
                 className={`glass-card glass-card-hover rounded-2xl p-6 sm:p-7 border-slate-800/90 transition-all duration-300 ${
-                  isHovered ? 'border-cyan-500/30' : ''
+                  isHovered ? 'border-cyan-500/40 shadow-[0_0_25px_rgba(6,182,212,0.15)]' : ''
                 }`}
               >
                 {/* Header */}
                 <div className="flex items-center gap-3.5 mb-4">
-                  <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                  <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shadow-inner">
                     {getIcon(category.iconName)}
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white tracking-tight">
+                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight font-mono">
                       {category.title}
                     </h3>
-                    <p className="text-xs text-slate-400 mt-0.5">
+                    <p className="text-xs text-slate-400 mt-0.5 font-light">
                       {category.description}
                     </p>
                   </div>
@@ -74,12 +74,12 @@ export const Skills: React.FC = () => {
                       key={sIdx}
                       className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-mono border transition-all duration-200 ${
                         skill.highlight
-                          ? 'bg-cyan-950/40 text-cyan-200 border-cyan-500/30 shadow-sm shadow-cyan-500/10'
-                          : 'bg-slate-900/60 text-slate-300 border-slate-800 hover:border-slate-700'
+                          ? 'bg-cyan-950/60 text-cyan-200 border-cyan-400/40 shadow-[0_0_12px_rgba(6,182,212,0.2)]'
+                          : 'bg-slate-900/70 text-slate-300 border-slate-800 hover:border-slate-700'
                       }`}
                     >
                       {skill.highlight ? (
-                        <Sparkles className="w-3 h-3 text-cyan-400" />
+                        <Sparkles className="w-3 h-3 text-cyan-300 animate-pulse" />
                       ) : (
                         <CheckCircle2 className="w-3 h-3 text-slate-500" />
                       )}
@@ -96,16 +96,16 @@ export const Skills: React.FC = () => {
         </div>
 
         {/* Specialized Focus Callout */}
-        <div className="mt-10 glass-card rounded-2xl p-6 border-slate-800/80 bg-gradient-to-r from-cyan-950/20 via-slate-900/40 to-indigo-950/20 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="mt-10 glass-card rounded-2xl p-6 border border-cyan-500/20 bg-gradient-to-r from-cyan-950/30 via-slate-950/60 to-purple-950/30 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-[0_0_30px_rgba(6,182,212,0.08)]">
           <div className="flex items-center gap-4">
-            <div className="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex-shrink-0">
-              <Cpu className="w-6 h-6" />
+            <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/25 flex-shrink-0">
+              <Orbit className="w-6 h-6 animate-spin" style={{ animationDuration: '20s' }} />
             </div>
             <div>
-              <h4 className="text-sm sm:text-base font-bold text-white">
+              <h4 className="text-sm sm:text-base font-bold text-white font-mono">
                 Multi-Platform & Tooling Focus
               </h4>
-              <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
+              <p className="text-xs sm:text-sm text-slate-400 mt-0.5 font-light">
                 From mobile UI state trees to CLI package management and backend microservices.
               </p>
             </div>

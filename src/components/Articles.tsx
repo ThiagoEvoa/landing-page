@@ -2,15 +2,15 @@ import React from 'react';
 import { SectionHeading } from './ui/SectionHeading';
 import { Badge } from './ui/Badge';
 import { profileData } from '../data/profileData';
-import { BookOpen, ArrowUpRight, Clock, ExternalLink } from 'lucide-react';
+import { BookOpen, ArrowUpRight, Radio, ExternalLink } from 'lucide-react';
 
 export const Articles: React.FC = () => {
   return (
-    <section id="writing" className="py-24 relative bg-slate-950/40 border-y border-slate-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="writing" className="py-24 relative bg-slate-950/60 border-y border-cyan-500/10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          eyebrow="Knowledge Sharing & Publications"
-          title="Technical Writing"
+          eyebrow="Transmissions & Transcripts"
+          title="Decoded Publications"
           subtitle="Articles, architectural guides, and performance deep dives published on Medium to share real-world engineering patterns."
         />
 
@@ -22,7 +22,7 @@ export const Articles: React.FC = () => {
               href={article.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card glass-card-hover rounded-2xl p-6 border-slate-800/80 flex flex-col justify-between group h-full"
+              className="glass-card glass-card-hover rounded-2xl p-6 border-slate-800/90 flex flex-col justify-between group h-full shadow-[0_0_20px_rgba(6,182,212,0.04)]"
             >
               <div>
                 {/* Meta info */}
@@ -30,16 +30,16 @@ export const Articles: React.FC = () => {
                   <Badge variant="cyan" size="sm">
                     {article.category}
                   </Badge>
-                  <div className="flex items-center gap-1 text-slate-500">
-                    <Clock className="w-3.5 h-3.5" />
+                  <div className="flex items-center gap-1.5 text-slate-500">
+                    <Radio className="w-3 h-3 text-cyan-400/80 animate-pulse" />
                     <span>{article.readTime}</span>
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug mb-3 flex items-start justify-between gap-2">
+                <h3 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors leading-snug mb-3 flex items-start justify-between gap-2 font-mono">
                   <span>{article.title}</span>
-                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 mt-1" />
+                  <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0 mt-0.5" />
                 </h3>
 
                 {/* Summary */}
@@ -51,8 +51,8 @@ export const Articles: React.FC = () => {
               {/* Footer */}
               <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-mono text-slate-500">
                 <span className="text-slate-400">{article.date}</span>
-                <span className="text-cyan-400 group-hover:underline flex items-center gap-1 font-sans">
-                  Read Article →
+                <span className="text-cyan-400 group-hover:underline flex items-center gap-1 font-mono">
+                  Decode Transmission →
                 </span>
               </div>
             </a>
@@ -65,10 +65,10 @@ export const Articles: React.FC = () => {
             href="https://thiagoevoa.medium.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-300 glass-card hover:text-white hover:bg-slate-800 border-slate-700 hover:border-cyan-500/40 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-mono font-semibold text-slate-300 glass-card hover:text-white hover:bg-slate-800/80 border-slate-700 hover:border-cyan-500/40 transition-all duration-200"
           >
             <BookOpen className="w-4 h-4 text-cyan-400" />
-            <span>Follow Thiago Evoá on Medium</span>
+            <span>Follow Transmission Channel on Medium</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
         </div>
